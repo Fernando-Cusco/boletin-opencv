@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.16)
+project(Boletin_2)
+find_package(OpenCV REQUIRED )
+add_executable(Boletin_2 main.cpp)
+target_link_libraries(Boletin_2 ${OpenCV_LIBS})
