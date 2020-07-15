@@ -11,58 +11,31 @@
 using namespace cv;
 using namespace std;
 
-int main() {
+Mat r1 = imread("angiografia.jpg", IMREAD_GRAYSCALE);
+Mat r2 = imread("radiografia2.jpg", IMREAD_GRAYSCALE);
+Mat r3 = imread("angiografia2.jpg", IMREAD_GRAYSCALE);
 
-    Mat r1 = imread("angiografia.jpg", IMREAD_GRAYSCALE);
-    Mat r2 = imread("radiografia2.jpg", IMREAD_GRAYSCALE);
-    Mat r3 = imread("angiografia2.jpg", IMREAD_GRAYSCALE);
+Mat r1Ero;
+Mat r2Ero;
+Mat r3Ero;
 
-    Mat r1Ero;
-    Mat r2Ero;
-    Mat r3Ero;
+Mat r1Dil;
+Mat r2Dil;
+Mat r3Dil;
 
-    Mat r1Dil;
-    Mat r2Dil;
-    Mat r3Dil;
+Mat top1;
+Mat top2;
+Mat top3;
 
-    Mat top1;
-    Mat top2;
-    Mat top3;
+Mat black1;
+Mat black2;
+Mat black3;
 
-    Mat black1;
-    Mat black2;
-    Mat black3;
+Mat topBlack1;
+Mat topBlack2;
+Mat topBlack3;
 
-    Mat topBlack1;
-    Mat topBlack2;
-    Mat topBlack3;
-
-
-    Mat elemento = getStructuringElement(MORPH_CROSS, Size(37, 37));
-    Mat mascara1 = getStructuringElement(MORPH_CROSS, Size(39, 39));
-    Mat mascara2 = getStructuringElement(MORPH_CROSS, Size(35, 35));
-
-    erode(r1, r1Ero, elemento);
-    erode(r2, r2Ero, elemento);
-    erode(r3, r3Ero, elemento);
-
-    dilate(r1, r1Dil, elemento);
-    dilate(r2, r2Dil, elemento);
-    dilate(r3, r3Dil, elemento);
-
-    morphologyEx(r1, top1, MORPH_TOPHAT, elemento);
-    morphologyEx(r2, top2, MORPH_TOPHAT, elemento);
-    morphologyEx(r3, top3, MORPH_TOPHAT, elemento);
-
-    morphologyEx(r1, black1, MORPH_BLACKHAT, elemento);
-    morphologyEx(r2, black2, MORPH_BLACKHAT, elemento);
-    morphologyEx(r3, black3, MORPH_BLACKHAT, elemento);
-
-
-    topBlack1 = r1 + abs(top1 - black1);
-    topBlack2 = r2 + abs(top2 - black2);
-    topBlack3 = r3 + abs(top3 - black3);
-
+void createAndView() {
     namedWindow("Original 1", WINDOW_AUTOSIZE);
     namedWindow("Original 2", WINDOW_AUTOSIZE);
     namedWindow("Original 3", WINDOW_AUTOSIZE);
@@ -87,9 +60,6 @@ int main() {
     namedWindow("Top-Black 2", WINDOW_AUTOSIZE);
     namedWindow("Top-Black 3", WINDOW_AUTOSIZE);
 
-    resize(r3, r3, Size(), 0.9, 0.9);
-    resize(r3Ero, r3Ero, Size(), 0.9, 0.9);
-    resize(r3Dil, r3Dil, Size(), 0.9, 0.9);
 
     imshow("Original 1", r1);
     imshow("Original 2", r2);
@@ -114,6 +84,35 @@ int main() {
     imshow("Top-Black 1", topBlack1);
     imshow("Top-Black 2", topBlack2);
     imshow("Top-Black 3", topBlack3);
+
+}
+
+int main() {
+
+    Mat mascara = getStructuringElement(MORPH_CROSS, Size(37, 37));
+
+    erode(r1, r1Ero, mascara);
+    erode(r2, r2Ero, mascara);
+    erode(r3, r3Ero, mascara);
+
+    dilate(r1, r1Dil, mascara);
+    dilate(r2, r2Dil, mascara);
+    dilate(r3, r3Dil, mascara);
+
+    morphologyEx(r1, top1, MORPH_TOPHAT, mascara);
+    morphologyEx(r2, top2, MORPH_TOPHAT, mascara);
+    morphologyEx(r3, top3, MORPH_TOPHAT, mascara);
+
+    morphologyEx(r1, black1, MORPH_BLACKHAT, mascara);
+    morphologyEx(r2, black2, MORPH_BLACKHAT, mascara);
+    morphologyEx(r3, black3, MORPH_BLACKHAT, mascara);
+
+
+    topBlack1 = r1 + abs(top1 - black1);
+    topBlack2 = r2 + abs(top2 - black2);
+    topBlack3 = r3 + abs(top3 - black3);
+
+    createAndView();
 
     waitKey(0);
     destroyAllWindows();

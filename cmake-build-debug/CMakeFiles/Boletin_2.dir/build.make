@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/fernando/Documentos/jetbrains/clion-2020.1.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /home/fernando/Documentos/jetbrains/clion-2020.1.2/bin/cmake/linux/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fernando/CLionProjects/Boletin-2
+CMAKE_SOURCE_DIR = /Users/fernandocuscomejia/Documents/Decimo/IA2/Vision-Computador/Boletin-2/boletin-opencv
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fernando/CLionProjects/Boletin-2/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/fernandocuscomejia/Documents/Decimo/IA2/Vision-Computador/Boletin-2/boletin-opencv/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Boletin_2.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/Boletin_2.dir/flags.make
 
 CMakeFiles/Boletin_2.dir/main.cpp.o: CMakeFiles/Boletin_2.dir/flags.make
 CMakeFiles/Boletin_2.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fernando/CLionProjects/Boletin-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Boletin_2.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Boletin_2.dir/main.cpp.o -c /home/fernando/CLionProjects/Boletin-2/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fernandocuscomejia/Documents/Decimo/IA2/Vision-Computador/Boletin-2/boletin-opencv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Boletin_2.dir/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Boletin_2.dir/main.cpp.o -c /Users/fernandocuscomejia/Documents/Decimo/IA2/Vision-Computador/Boletin-2/boletin-opencv/main.cpp
 
 CMakeFiles/Boletin_2.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Boletin_2.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fernando/CLionProjects/Boletin-2/main.cpp > CMakeFiles/Boletin_2.dir/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/fernandocuscomejia/Documents/Decimo/IA2/Vision-Computador/Boletin-2/boletin-opencv/main.cpp > CMakeFiles/Boletin_2.dir/main.cpp.i
 
 CMakeFiles/Boletin_2.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Boletin_2.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fernando/CLionProjects/Boletin-2/main.cpp -o CMakeFiles/Boletin_2.dir/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/fernandocuscomejia/Documents/Decimo/IA2/Vision-Computador/Boletin-2/boletin-opencv/main.cpp -o CMakeFiles/Boletin_2.dir/main.cpp.s
 
 # Object files for target Boletin_2
 Boletin_2_OBJECTS = \
@@ -79,59 +79,60 @@ Boletin_2_EXTERNAL_OBJECTS =
 
 Boletin_2: CMakeFiles/Boletin_2.dir/main.cpp.o
 Boletin_2: CMakeFiles/Boletin_2.dir/build.make
-Boletin_2: /usr/local/lib/libopencv_gapi.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_stitching.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_aruco.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_bgsegm.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_bioinspired.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_ccalib.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_cvv.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_dnn_objdetect.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_dnn_superres.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_dpm.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_face.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_freetype.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_fuzzy.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_hfs.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_img_hash.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_intensity_transform.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_line_descriptor.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_quality.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_rapid.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_reg.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_rgbd.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_saliency.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_stereo.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_structured_light.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_superres.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_surface_matching.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_tracking.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_videostab.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_xfeatures2d.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_xobjdetect.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_xphoto.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_shape.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_highgui.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_datasets.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_plot.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_text.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_dnn.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_ml.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_phase_unwrapping.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_optflow.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_ximgproc.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_video.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_videoio.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_imgcodecs.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_objdetect.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_calib3d.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_features2d.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_flann.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_photo.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_imgproc.so.4.4.0
-Boletin_2: /usr/local/lib/libopencv_core.so.4.4.0
+Boletin_2: /usr/local/lib/libopencv_gapi.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_stitching.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_alphamat.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_aruco.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_bgsegm.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_bioinspired.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_ccalib.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_dnn_objdetect.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_dnn_superres.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_dpm.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_face.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_freetype.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_fuzzy.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_hfs.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_img_hash.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_intensity_transform.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_line_descriptor.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_quality.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_rapid.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_reg.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_rgbd.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_saliency.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_sfm.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_stereo.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_structured_light.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_superres.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_surface_matching.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_tracking.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_videostab.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_xfeatures2d.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_xobjdetect.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_xphoto.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_highgui.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_shape.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_datasets.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_plot.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_text.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_dnn.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_ml.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_phase_unwrapping.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_optflow.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_ximgproc.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_video.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_videoio.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_imgcodecs.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_objdetect.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_calib3d.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_features2d.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_flann.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_photo.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_imgproc.4.3.0.dylib
+Boletin_2: /usr/local/lib/libopencv_core.4.3.0.dylib
 Boletin_2: CMakeFiles/Boletin_2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fernando/CLionProjects/Boletin-2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Boletin_2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/fernandocuscomejia/Documents/Decimo/IA2/Vision-Computador/Boletin-2/boletin-opencv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Boletin_2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Boletin_2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -144,6 +145,6 @@ CMakeFiles/Boletin_2.dir/clean:
 .PHONY : CMakeFiles/Boletin_2.dir/clean
 
 CMakeFiles/Boletin_2.dir/depend:
-	cd /home/fernando/CLionProjects/Boletin-2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fernando/CLionProjects/Boletin-2 /home/fernando/CLionProjects/Boletin-2 /home/fernando/CLionProjects/Boletin-2/cmake-build-debug /home/fernando/CLionProjects/Boletin-2/cmake-build-debug /home/fernando/CLionProjects/Boletin-2/cmake-build-debug/CMakeFiles/Boletin_2.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/fernandocuscomejia/Documents/Decimo/IA2/Vision-Computador/Boletin-2/boletin-opencv/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/fernandocuscomejia/Documents/Decimo/IA2/Vision-Computador/Boletin-2/boletin-opencv /Users/fernandocuscomejia/Documents/Decimo/IA2/Vision-Computador/Boletin-2/boletin-opencv /Users/fernandocuscomejia/Documents/Decimo/IA2/Vision-Computador/Boletin-2/boletin-opencv/cmake-build-debug /Users/fernandocuscomejia/Documents/Decimo/IA2/Vision-Computador/Boletin-2/boletin-opencv/cmake-build-debug /Users/fernandocuscomejia/Documents/Decimo/IA2/Vision-Computador/Boletin-2/boletin-opencv/cmake-build-debug/CMakeFiles/Boletin_2.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Boletin_2.dir/depend
 
